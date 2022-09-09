@@ -1,7 +1,18 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import AllUsers from "./components/pages/AllUsers/AllUsers";
+import NewUser from "./components/pages/NewUser/NewUser";
 
 function App() {
-  return <div className="App">Hey hey</div>;
+  return (
+    <div className="App">
+      Hey hey
+      <Routes>
+        <Route path="/" element={<AllUsers />} />
+        <Route path="/new-user" element={<NewUser />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
