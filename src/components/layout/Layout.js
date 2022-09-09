@@ -1,10 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Layout.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./Layout.module.css";
+import MainNavigation from "./MainNavigation/MainNavigation";
 
-const Layout = () => (
-  <div className={styles.Layout}>
-    Layout Component
+const Layout = (props) => (
+  <div>
+    <MainNavigation />
+    <main className={styles.main}>{props.children}</main>
   </div>
 );
 
