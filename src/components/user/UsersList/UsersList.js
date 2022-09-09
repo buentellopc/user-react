@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './UsersList.module.css';
+import React from "react";
+import UserItem from "../UserItem/UserItem";
+import styles from "./UsersList.module.css";
 
-const UsersList = () => (
-  <div className={styles.UsersList}>
-    UsersList Component
-  </div>
-);
-
-UsersList.propTypes = {};
-
-UsersList.defaultProps = {};
+const UsersList = (props) => {
+  return (
+    <ul className={styles.list}>
+      {props.users.map((user) => (
+        <UserItem name={user.name} />
+      ))}
+    </ul>
+  );
+};
 
 export default UsersList;

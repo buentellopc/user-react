@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styles from "./MainNavigation.module.css";
 import { Link } from "react-router-dom";
 
@@ -18,9 +17,5 @@ const MainNavigation = () => (
     </nav>
   </header>
 );
-
-MainNavigation.propTypes = {};
-
-MainNavigation.defaultProps = {};
 
 export default MainNavigation;

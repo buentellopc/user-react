@@ -2,7 +2,6 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import AllUsers from "./components/pages/AllUsers/AllUsers";
 import NewUser from "./components/pages/NewUser/NewUser";
-import MainNavigation from "./components/layout/MainNavigation/MainNavigation";
 import Layout from "./components/layout/Layout";
 
 function App() {
