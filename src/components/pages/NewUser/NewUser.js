@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import UserService from "../../../service/UserService";
 import UserForm from "../../user/UserForm/UserForm";
 import styles from "./NewUser.module.css";
+import delay from "../../../utilities/delay";
 
 const NewUser = () => {
   let navigate = useNavigate();
@@ -23,7 +24,9 @@ const NewUser = () => {
       })
       .then((data) => {
         console.log("post request message: ", data);
-        navigate("/", { replace: true });
+        delay(1000).then(() => {
+          navigate("/", { replace: true });
+        });
       });
   };
 
