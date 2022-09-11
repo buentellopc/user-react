@@ -4,12 +4,15 @@ import styles from "./UsersList.module.css";
 
 const UsersList = (props) => {
   return (
-    <table>
+    <table className="table table-striped table-bordered table-sm table-hover">
       <thead>
         <tr>
           <th>#</th>
           <th>Name</th>
           <th>Last Name</th>
+          <th>Gender</th>
+          <th>Citizen Number</th>
+          <th>Address ID</th>
         </tr>
       </thead>
       <tbody>
@@ -19,6 +22,9 @@ const UsersList = (props) => {
             id={user.id}
             name={user.name}
             lastName={user.lastName}
+            gender={user.gender}
+            citizenNumber={user.citizenNumber}
+            addressID={user.addressID.id}
           />
         ))}
       </tbody>

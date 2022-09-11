@@ -4,13 +4,22 @@ import styles from "./UserItem.module.css";
 const UserItem = (props) => (
   <tr>
     <td>
-      <h3>{props.id}</h3>
+      <p>{props.id}</p>
     </td>
     <td>
-      <h3>{props.name}</h3>
+      <p>{props.name}</p>
     </td>
     <td>
-      <h3>{props.lastName}</h3>
+      <p>{props.lastName}</p>
+    </td>
+    <td>
+      <p>{props.gender}</p>
+    </td>
+    <td>
+      <p>{props.citizenNumber}</p>
+    </td>
+    <td>
+      <p>{props.addressID}</p>
     </td>
   </tr>
 );
