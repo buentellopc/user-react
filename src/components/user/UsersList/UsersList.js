@@ -4,11 +4,25 @@ import styles from "./UsersList.module.css";
 
 const UsersList = (props) => {
   return (
-    <ul className={styles.list}>
-      {props.users.map((user) => (
-        <UserItem key={user.id} name={user.name} />
-      ))}
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.users.map((user) => (
+          <UserItem
+            key={user.id}
+            id={user.id}
+            name={user.name}
+            lastName={user.lastName}
+          />
+        ))}
+      </tbody>
+    </table>
   );
 };
 
