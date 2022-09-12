@@ -1,5 +1,4 @@
 import React from "react";
-import { ProSidebar } from "react-pro-sidebar";
 import Aside from "./Aside";
 import styles from "./Layout.module.css";
 import MainNavigation from "./MainNavigation/MainNavigation";

@@ -3,6 +3,7 @@ import UsersTable from "../../user/UsersTable/UsersTable";
 import UserService from "../../../service/UserService";
 import UserSearch from "../../user/UserSearch/UserSearch";
 import styles from "./AllUsers.module.css";
+import MainNavigation from "../../layout/MainNavigation/MainNavigation";
 
 const AllUsers = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,18 +31,16 @@ const AllUsers = () => {
   }
 
   return (
-    <section className={styles.AllUsers}>
-      <div className="row">
-        <div className="col">
-          <h3>Users table</h3>
-          <UsersTable users={loadedUsers} />
-        </div>
-        <div className="col">
-          <h3>Find user by id</h3>
-          <UserSearch />
-        </div>
+    <div className="row">
+      <div className="col">
+        <h3>Users table</h3>
+        <UsersTable users={loadedUsers} />
       </div>
-    </section>
+      <div className="col">
+        <h3>Find user by id</h3>
+        <UserSearch />
+      </div>
+    </div>
   );
 };
 
