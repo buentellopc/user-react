@@ -3,3 +3,15 @@
   width: 90%;
   max-width: 70rem;
 }
+
+.Layout {
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.Layout .main {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+}
