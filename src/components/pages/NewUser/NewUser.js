@@ -25,7 +25,7 @@ const NewUser = () => {
       .then((data) => {
         console.log("post request message: ", data);
         delay(1000).then(() => {
-          navigate("/", { replace: true });
+          navigate("/user", { replace: true });
         });
       });
   };
