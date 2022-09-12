@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import UserService from "../../../service/UserService";
+import UserItem from "../UserItem/UserItem";
 
 const UserSearch = () => {
-  const [foo, SetFoo] = useState("");
-  const searchHandler = () => {
-    SetFoo("handler and state is working");
+  const [userId, setUserId] = useState("");
+
+  const inputChangeHandler = (event) => {
+    setUserId(event.target.value);
+  };
+
+  const searchHandler = (event) => {
+    UserService.getUser(userId)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => console.log(data));
   };
 
   return (
@@ -13,6 +24,8 @@ const UserSearch = () => {
           type="text"
           className="form-control"
           placeholder="Search by id"
+          value={userId}
+          onChange={inputChangeHandler}
         />
       </div>
       <div>
@@ -23,8 +36,9 @@ const UserSearch = () => {
         >
           Search
         </button>
-        {foo}
+        {userId}
       </div>
+      {/* <UserItem/> */}
     </div>
   );
 };
