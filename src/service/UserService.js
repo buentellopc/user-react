@@ -1,13 +1,18 @@
+const createUser = (requestOptions) =>
+  fetch("http://localhost:9092/v1/publish/user", requestOptions);
+
 const getAllUsers = () => {
   return fetch("http://localhost:9095/users");
 };
 
-const createUser = (requestOptions) =>
-  fetch("http://localhost:9092/v1/publish/user", requestOptions);
+const getUser = (userId) => {
+  return fetch(`http://localhost:9095/user/${userId}`);
+};
 
 const UserService = {
-  getAllUsers,
   createUser,
+  getAllUsers,
+  getUser,
 };
 
 export default UserService;
