@@ -1,1 +1,6 @@
-.User {}
+.UserItem {
+}
+
+.UserItem li:nth-child(odd) {
+  background-color: rgb(0, 0, 0, 0);
+}
