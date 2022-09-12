@@ -4,7 +4,6 @@ import UserService from "../../../service/UserService";
 import UserForm from "../../user/UserForm/UserForm";
 import styles from "./NewUser.module.css";
 import delay from "../../../utilities/delay";
-import MainNavigation from "../../layout/MainNavigation/MainNavigation";
 
 const NewUser = () => {
   let navigate = useNavigate();

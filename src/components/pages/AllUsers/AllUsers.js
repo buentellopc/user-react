@@ -3,7 +3,6 @@ import UsersTable from "../../user/UsersTable/UsersTable";
 import UserService from "../../../service/UserService";
 import UserSearch from "../../user/UserSearch/UserSearch";
 import styles from "./AllUsers.module.css";
-import MainNavigation from "../../layout/MainNavigation/MainNavigation";
 
 const AllUsers = () => {
   const [isLoading, setIsLoading] = useState(true);
