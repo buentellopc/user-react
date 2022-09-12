@@ -33,9 +33,11 @@ const AllUsers = () => {
     <section className={styles.AllUsers}>
       <div className="row">
         <div className="col">
+          <h3>Users table</h3>
           <UsersTable users={loadedUsers} />
         </div>
         <div className="col">
+          <h3>Find user by id</h3>
           <UserSearch />
         </div>
       </div>
