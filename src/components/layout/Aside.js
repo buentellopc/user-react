@@ -3,11 +3,9 @@ import {
   ProSidebar,
   Menu,
   MenuItem,
-  SubMenu,
   SidebarHeader,
   SidebarContent,
 } from "react-pro-sidebar";
-import { BsDash } from "react-icons/bs";
 import styles from "./Aside.module.css";
 import { Link } from "react-router-dom";
 
@@ -44,7 +42,6 @@ export default function Aside() {
             <Link to="/user">User</Link>
           </MenuItem>
           <MenuItem>
-            {" "}
             <Link to="/userInfo">User Info</Link>
           </MenuItem>
           <MenuItem>Address</MenuItem>
