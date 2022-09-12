@@ -3,6 +3,8 @@
 
 .header {
   width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
   height: 5rem;
   display: flex;
   align-items: center;
