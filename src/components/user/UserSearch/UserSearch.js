@@ -4,6 +4,8 @@ import UserItem from "../UserItem/UserItem";
 
 const UserSearch = () => {
   const [userId, setUserId] = useState("");
+  const [userFound, setUserFound] = useState({});
+  const [isUser, SetIsUser] = useState(false);
 
   const inputChangeHandler = (event) => {
     setUserId(event.target.value);
@@ -14,12 +16,17 @@ const UserSearch = () => {
       .then((response) => {
         return response.json();
       })
-      .then((data) => console.log(data));
+      .then((data) => {
+        setUserFound(data);
+        SetIsUser(true);
+      });
   };
+
+  console.log(userFound);
 
   return (
     <div>
-      <div>
+      <div className="input-group mb-3">
         <input
           type="text"
           className="form-control"
@@ -27,8 +34,6 @@ const UserSearch = () => {
           value={userId}
           onChange={inputChangeHandler}
         />
-      </div>
-      <div>
         <button
           className="btn btn-outline-secondary"
           type="submit"
@@ -36,9 +41,9 @@ const UserSearch = () => {
         >
           Search
         </button>
-        {userId}
       </div>
-      {/* <UserItem/> */}
+
+      {isUser && <UserItem userDetails={userFound} />}
     </div>
   );
 };
