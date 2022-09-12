@@ -23,3 +23,8 @@ h2 {
 p {
   margin-bottom: 0.25rem;
 }
+
+/* .table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: red;
+} */

@@ -26,7 +26,7 @@ const UsersList = (props) => {
   ));
 
   return (
-    <table className="table table-striped table-bordered table-sm table-hover">
+    <table className="table table-striped table-bordered table-sm table-hover shadow-sm">
       <thead>
         <tr>
           <th>#</th>
