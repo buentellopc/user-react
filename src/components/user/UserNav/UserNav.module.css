@@ -1,8 +1,10 @@
-.MainNavigation {
+.UserNav {
 }
 
 .header {
   width: 100%;
+  max-width: 70rem;
+  margin: 0;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -39,12 +41,4 @@
 .header a:active,
 .header a.active {
   color: white;
-}
-
-.badge {
-  background-color: #cc2062;
-  color: white;
-  border-radius: 12px;
-  padding: 0 1rem;
-  margin-left: 0.5rem;
 }
